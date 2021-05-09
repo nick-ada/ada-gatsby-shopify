@@ -1,3 +1,8 @@
+.nav {
+  grid-area: navHeader;
+  align-self: stretch;
+}
+
 .container {
   padding-left: var(--size-gutter-raw);
   padding-right: var(--size-gutter-raw);

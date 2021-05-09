@@ -20,7 +20,7 @@
 
 .footerStyle {
   padding: var(--space-2xl) var(--space-xl);
-  gap: var(--space-xl);
+  /*gap: var(--space-xl);*/
   display: grid;
   grid-template-columns: 1fr;
   text-align: center;
@@ -32,7 +32,7 @@
   display: flex;
   gap: var(--space-md);
   justify-content: center;
-  padding-bottom: var(--space-lg);
+  /*padding-bottom: var(--space-lg);*/
 }
 
 .blurb {
@@ -44,7 +44,7 @@
   font-size: var(--text-xs);
     padding-top: 0px !important;
     font-size: 80% !important;
-    max-width: 850px !important;
+    max-width: 736px !important;
     line-height: 20px;
     margin-right: auto;
     margin-left: auto;
@@ -56,12 +56,25 @@
   font-size: var(--text-md);
 }
 
+.footerNavGroup{
+
+}
+
 .footerNavListItem {
   align-items: center;
   display: flex;
   flex-direction: column;
   flex: 0 0 100%;
   white-space: nowrap;
+}
+
+.socialIconList{
+  display:flex;
+}
+
+.socialIcon{
+  width: 50px;
+  height: 40px;
 }
 
 .links ul {

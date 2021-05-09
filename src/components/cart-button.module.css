@@ -4,10 +4,12 @@
   width: var(--size-input);
   height: var(--size-input);
   display: flex;
-  justify-content: center;
+  /*justify-content: center;
   align-items: center;
   position: relative;
-  align-self: center;
+  align-self: center;*/
+  padding: 5px;
+  max-height: 40px;
 }
 
 .cartButton:hover {

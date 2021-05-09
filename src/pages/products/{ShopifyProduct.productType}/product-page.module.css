@@ -1,11 +1,59 @@
-.productBox {
-  display: grid;
-  grid-template-columns: 1fr;
-  column-gap: var(--space-3xl);
+.productDetails{
+  width: 40%;
 }
+
+.productDetailsWrapper {
+  display: flex;
+}
+
+.productTabs {
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  margin: 0 0 -2px 0;
+  list-style: none;
+  padding: 0 0 0 13px;
+  /*background-color: #fff;*/
+}
+
+.productTabs li {
+  background: none;
+  color: #888;
+  border-bottom: 1px solid transparent;
+  display: inline-block;
+  padding: 7px 1%;
+  cursor: pointer;
+  text-align: center;
+  min-width: 24%;
+}
+.tabCurrent {
+  border-bottom: 2px solid #1f1f1f !important;
+  color: #000 !important;
+  margin: 0 0 2px;
+}
+
+
+
+ /* grid-template-columns: 1fr;
+ display: inline-block;
+  column-gap: var(--space-3xl);*/
 
 .container {
   padding: var(--size-gutter-raw);
+  padding-top: 26px;
+  padding-bottom: 26px;
+
+  font-size: var(--text-prose);
+  font-family: Vito Extra Light;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 17px;
+  letter-spacing: .35px;
+  line-height: 1.35em;
+  text-transform: none;
+  color: #292929;
 }
 
 .header {
@@ -13,16 +61,81 @@
   font-weight: var(--bold);
   margin-bottom: var(--space-xl);
   line-height: var(--dense);
+  
+    font-family: Vito;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 34px;
+    letter-spacing: 0em;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .productDescription {
   font-size: var(--text-prose);
+  font-family: Vito Extra Light;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 17px;
+  letter-spacing: .35px;
+  line-height: 1.35em;
+  text-transform: none;
+  color: #292929;
+}
+
+.productPrice{
+  text-align:center;
+  padding-bottom: 15px;
+}
+
+.inquireButton{
+  padding-left: 0;
+  padding-right: 0;
+  width: 140px;
+  padding: 8px 0;
+  border-radius: 5px;
+  color: #2e343b;
+  border-width: 2px;
+  border-style: solid;
+  background-color: transparent;
+  -webkit-transition: 0.1s background-color linear, 0.1s color linear;
+  -moz-transition: 0.1s background-color linear, 0.1s color linear;
+  -o-transition: 0.1s background-color linear, 0.1s color linear;
+  transition: 0.1s background-color linear, 0.1s color linear;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+
+  font-family: Vito Medium;
+    font-size: 18px;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .08em;
 }
 
 .productImageWrapper {
   position: relative;
   padding-bottom: var(--space-2xl);
+  overflow: hidden;
+  margin: 0;
+  float: left;
+  width: 60%;
+
+/*  @media (min-width: 641px): {
+    
+  }
+
+  @media (min-width: 1281px): {
+
+  }*/
 }
+
+
+
 
 .productImageList {
   display: flex;
@@ -150,11 +263,50 @@
   display: flex;
   align-items: center;
   flex-direction: row;
+  font-family: Vito;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  line-height: 1em;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  padding-bottom: 17px;
 }
 
+.navBreadcrumbLink{
+  display: inline-block;
+    margin: 5px 2px;
+    color: #636363 !important;
+  
+}
+
+.navBreadcrumbLink:not(:first-child):before {
+  content: '|';
+  display: inline-block;
+  margin: 0 5px 0 0;
+}
 .breadcrumb a:hover {
   color: var(--text-color);
   text-decoration: underline;
+}
+
+.tabContent {
+  border-top: 2px solid #eee;
+  /*display: none;*/
+  background: #fff;
+  padding: 15px 15px 0 15px;
+  margin: 0 0 0 0;
+  width: 100%;
+}
+
+.tabContent.current {
+  opacity: 1;
+  pointer-events: auto;
+  display: inherit;
+  min-height: 244px;
 }
 
 .metaSection {
@@ -164,7 +316,8 @@
   align-items: baseline;
 }
 
-@media (min-width: 640px) {
+
+/*@media (min-width: 640px) {
   .productBox {
     grid-template-columns: 1fr 2fr;
   }
@@ -177,4 +330,4 @@
   .productBox {
     grid-template-columns: repeat(2, 1fr);
   }
-}
+}*/

@@ -10,7 +10,8 @@ import { formatPrice } from "../../../utils/format-price"
 import { Seo } from "../../../components/seo"
 import { CgChevronRight as ChevronIcon } from "react-icons/cg"
 import {
-  productBox,
+  //productBox,
+  productDetailsWrapper,
   container,
   header,
   productImageWrapper,
@@ -27,6 +28,15 @@ import {
   addToCartStyle,
   metaSection,
   productDescription,
+  productDetailsTabs,
+  productTabs,
+  productDetails,
+  navBreadcrumbLink,
+  tabContent,
+  tabCurrent,
+  productPrice,
+  inquireButton
+
 } from "./product-page.module.css"
 
 export default function Product({ data: { product, suggestions } }) {
@@ -113,7 +123,8 @@ export default function Product({ data: { product, suggestions } }) {
       ) : undefined}
       <main>
         <div className={container}>
-          <div className={productBox}>
+        <div>
+          <div className={productDetailsWrapper}>
             {hasImages && (
               <div className={productImageWrapper}>
                 <div
@@ -153,16 +164,108 @@ export default function Product({ data: { product, suggestions } }) {
               <span className={noImagePreview}>No Preview image</span>
             )}
 
-            <div>
+            <div className={productDetails}>
               <div className={breadcrumb}>
-                <Link to={product.productTypeSlug}>{product.productType}</Link>
-                <ChevronIcon size={12} />
+                <Link to="/bridal-jewelry-home/" className={navBreadcrumbLink}>Bridal</Link>
+                <Link to="/lab-diamond-engagement-rings-all" className={navBreadcrumbLink}>Engagement Rings</Link>
+                <Link to="/solitaire-engagement-rings/" className={navBreadcrumbLink}>Solitaires</Link>
               </div>
               <h1 className={header}>{title}</h1>
-              <p className={productDescription}>{description}</p>
-              <h2 className={priceValue}>
+              <div className={productDetailsTabs}>
+                <ul className={productTabs}>
+                    <li className={tabCurrent} data-tab="tab-details">DETAILS</li>
+                    <li class="tab-link middle-tab" data-tab="tab-price">PRICING</li>
+                    <li class="tab-link" data-tab="tab-share">SHARE</li>
+                </ul>
+                <div class="tabs-wrapper tabs-3">
+                    <div id="tab-details" className={tabContent} >
+                      <div className={productPrice} >Setting from {price}</div>
+                      <p className={productDescription}>{description}</p>
+                      {/*<div class="ds-info-block">
+                          An absolute classic, the Six Prong Solitaire can be customized with or without a knife edge. Band widths available from 1.8 - 3.5mm.&nbsp;
+                          <div class="info-label">
+                            DELIVERY TIME    
+                            <span class="ds-info-data-tts">
+                                1-2 Weeks
+                                <div class="tooltip">
+                                  <img src="https://www.adadiamonds.com/assets/questionmark.png" height="10" width="10" />
+                                  <span class="tooltiptext">
+                                      Delivery time is an estimate<br />of production and shipping time<br />following final design approval.
+                                      <hr />
+                                      In a hurry? Rush services available<br />or choose a <a href="/ready-to-ship-jewelry">Ready to Ship</a> piece.
+                                  </span>
+                                </div>
+                            </span>
+                          </div>
+            </div>
+            onPress={showInquireModal}
+            
+            */}
+
+            <div className={inquireButton}>
+            <button
+  
+  title="Inquire"
+  color="#841584"
+  accessibilityLabel="Inquire with a Diamond Concierge"
+>INQUIRE</button>
+</div>
+                      {/*<div class="sqs-block button-block sqs-block-button pdp-details-inquire-button" data-block-type="53">
+                          <div class="sqs-block-content">
+                            <div class="ds-view-option sqs-block-button-container--center" data-alignment="center" data-button-size="small"><a onclick="showInquireModal()" class="sqs-block-button-element--small sqs-block-button-element match-height" id="inquire-anchor">INQUIRE</a></div>
+                          </div>
+          </div>*/}
+          </div>
+                    <div id="tab-price" class="tab-content">
+                      {/*<div class="ds-info-block">
+                          <div class="tab-pricing-table">
+                            <table>
+                                <tbody>
+                                  <tr>
+                                      <td>$1,500<br />(Setting Only)</td>
+                                      <td>14kt Gold</td>
+                                  </tr>
+                                  <tr>
+                                      <td>$1,600<br />(Setting Only)</td>
+                                      <td>18kt Gold</td>
+                                  </tr>
+                                  <tr>
+                                      <td>$1,800<br />(Setting Only)</td>
+                                      <td>Platinum</td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                          </div>
+                      </div>
+                      <div class="sqs-block button-block sqs-block-button" data-block-type="53">
+                          <div class="sqs-block-content">
+                            <div class="ds-view-diamond-price sqs-block-button-container--center" data-alignment="center" data-button-size="small"><a class="sqs-block-button-element--small sqs-block-button-element match-height" id="pricing-button" onclick="openPricingModal()">SEE CENTER STONE PRICING</a></div>
+                          </div>
+                      </div>
+                      <div class="sqs-block button-block sqs-block-button pdp-details-inquire-button" data-block-type="53">
+                          <div class="sqs-block-content">
+                            <div class="ds-view-option sqs-block-button-container--center" data-alignment="center" data-button-size="small"><a onclick="showInquireModal()" class="sqs-block-button-element--small sqs-block-button-element match-height" id="inquire-anchor">INQUIRE</a></div>
+                          </div>
+            </div>*/}
+                    </div>
+                    <div id="tab-share" class="tab-content product-share-tab built-in-buttons">
+                      {/*<h3 class="dah-title">Send a Hint</h3>
+                      <div class="dah-body">
+                          
+                      </div>
+                      <h3 class="share-title">Share</h3>
+                      <div class="ProductItem-details-share">
+
+                      </div>*/}   
+                    </div>
+                </div>
+              </div>
+
+
+              
+              {/*<h2 className={priceValue}>
                 <span>{price}</span>
-              </h2>
+            </h2>
               <fieldset className={optionsWrapper}>
                 {hasVariants &&
                   options.map(({ id, name, values }, index) => (
@@ -198,7 +301,7 @@ export default function Product({ data: { product, suggestions } }) {
                 />
               </div>
               <div className={metaSection}>
-                <span className={labelFont}>Type</span>
+                {/*<span className={labelFont}>Type</span>
                 <span className={tagList}>
                   <Link to={product.productTypeSlug}>
                     {product.productType}
@@ -211,9 +314,10 @@ export default function Product({ data: { product, suggestions } }) {
                     <Link to={`/search?t=${tag}`}>{tag}</Link>
                   ))}
                 </span>
-              </div>
+                  </div>*/}
             </div>
           </div>
+        </div>
         </div>
       </main>
     </Layout>
