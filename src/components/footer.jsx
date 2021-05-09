@@ -8,6 +8,9 @@ import {
   logos,
   footerNavList,
   footerNavListItem,
+  footerNav,
+  footerNavItem,
+  backToTop
 } from "./footer.module.css"
 
 export function Footer() {
@@ -15,37 +18,48 @@ export function Footer() {
     <footer className={footerStyle}>
       <div className={blurb}>
         <div className={logos}>
-          <Logo />
+        <nav class="sqs-svg-icon--list">
+          <a href="https://www.instagram.com/adadiamonds" target="_blank" class="sqs-svg-icon--wrapper instagram-unauth" aria-label="Ada Diamonds">
+            <div>
+              IG
+              <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
+                
+              </svg>
+            </div>
+          </a>
+          <a href="https://www.facebook.com/adadiamonds" target="_blank" class="sqs-svg-icon--wrapper facebook" aria-label="Ada Diamonds">
+            <div>
+              FB
+              <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
+
+              </svg>
+            </div>
+          </a>
+          <a href="https://www.pinterest.com/adadiamonds/" target="_blank" class="sqs-svg-icon--wrapper pinterest" aria-label="Ada Diamonds ">
+            PN
+            <div>
+              <svg class="sqs-svg-icon--social" viewBox="0 0 64 64">
+
+              </svg>
+            </div>
+          </a>
+        </nav>
         </div>
-        <strong>gatsby-starter-shopify</strong> change this by editing{" "}
-        <code>src/components/footer.jsx</code>
       </div>
-      <nav className={links} aria-label="footer">
-        <ul className={footerNavList}>
-          <li className={footerNavListItem}>
-            <a href="https://github.com/gatsbyjs/gatsby-starter-shopify">
-              Source Code and Docs
-            </a>
-          </li>
-          <li className={footerNavListItem}>
-            <a href="https://www.gatsbyjs.com/cloud/">About Gatsby Cloud</a>
-          </li>
-          {process.env.GATSBY_DEMO_STORE === "true" && (
-            <li className={footerNavListItem}>
-              <a href="https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-shopify&utm_campaign=shopify-starter">
-                <img
-                  src="https://www.gatsbyjs.com/deploynow.png"
-                  alt="Deploy to Gatsby Cloud"
-                  height="38"
-                  width="251"
-                />
-              </a>
-            </li>
-          )}
-        </ul>
+      <nav class={footerNav} data-content-field="navigation">
+
+        <div class="Footer-nav-group">
+          
+          <a href="/ada-diamonds-reviews" class={footerNavItem} >Reviews</a>
+          <a href="/press" class={footerNavItem}>Press</a>
+          <a href="/careers" class={footerNavItem}>Careers</a>
+          <a href="/terms" class={footerNavItem}>Terms</a>
+          <a href="/visit" class={footerNavItem}>Visit</a></div>
+
+        <div id={backToTop} class="external"><a href="#" onclick="smoothScrollTo('body')"><span>BACK TO TOP</span></a></div>
       </nav>
       <div className={copyright}>
-        Copyright &copy; {new Date().getFullYear()} · All rights reserved
+        <strong>© {new Date().getFullYear()} Ada Diamonds, Inc.</strong> All diamonds offered by Ada Diamonds™ are proudly laboratory-grown and can be referred to as <em>lab created diamonds, grown diamonds, synthetic diamonds, man-made diamonds, cultivated diamonds, or cultured diamonds</em>.
       </div>
     </footer>
   )

@@ -1,3 +1,23 @@
+.footerNav {
+  font-family: Vito;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: .1em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  padding: 12px 0 !important;
+  margin-right: 0px !important;
+}
+
+ .footerNavItem {
+  padding-right: 1em;
+}
+
+#backToTop {
+  display: none;
+}
+
 .footerStyle {
   padding: var(--space-2xl) var(--space-xl);
   gap: var(--space-xl);
@@ -22,6 +42,12 @@
 .copyright {
   color: var(--text-color-secondary);
   font-size: var(--text-xs);
+    padding-top: 0px !important;
+    font-size: 80% !important;
+    max-width: 850px !important;
+    line-height: 20px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .footerNavList {
