@@ -53,7 +53,11 @@ export function Seo({
       titleTemplate={`%s | ${siteTitle}`}
     >
       <html lang={hrefLang} />
-      <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href='../fonts/JosefinSans-Regular.woff2'></link>
+      <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href='./static/fonts/JosefinSans-Regular.woff2' />
+      <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href='./static/fonts/Vito-ExtraLight.woff2' />
+      <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href='./static/fonts/Vito-Medium.woff2' />
+      <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href='./static/fonts/Vito-Regular.woff2' />
+      <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href='./static/fonts/Vito-Bold.woff2' />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta property="og:title" content={seo.title} />
