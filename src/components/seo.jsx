@@ -53,6 +53,7 @@ export function Seo({
       titleTemplate={`%s | ${siteTitle}`}
     >
       <html lang={hrefLang} />
+      <link rel="preload" as="font" crossorigin="anonymous" type="font/woff2" href='../fonts/JosefinSans-Regular.woff2'></link>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta property="og:title" content={seo.title} />
